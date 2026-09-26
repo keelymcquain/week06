@@ -221,18 +221,35 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <!-- You can create the file with a command or in VS Code; include your git status command and its output. -->
 
 ```bash
-
+touch .gitignore
+git add .gitignore
+git status
 ```
 
 The output of the command was:
 
 ```
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        data/
+        results/
+
+no changes added to commit (use "git add" and/or "git commit -a")
 
 ```
 
 *Answer*: Is the `.gitignore` working as intended?
 
+No, even though I added data and results to the gitignore file it continues to recognize them as untracked files. 
+
 ### 15: Stage and commit `.gitignore`, then README again
+It won't let me commit the gitignore file, it gives me an error.
 
 <!-- No command/output needed here -- we check the repo directly. -->
 
