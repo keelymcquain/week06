@@ -251,6 +251,8 @@ No, even though I added data and results to the gitignore file it continues to r
 ### 15: Stage and commit `.gitignore`, then README again
 It won't let me commit the gitignore file, it gives me an error.
 
+Update: once I pressed file > save all it finally worked.
+
 <!-- No command/output needed here -- we check the repo directly. -->
 
 ## Part D: Exploring the FASTQ files with Unix data tools
