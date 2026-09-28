@@ -231,7 +231,6 @@ It won't let me commit the gitignore file, it gives me an error.
 
 Update: once I pressed file > save all it finally worked.
 
-<!-- No command/output needed here -- we check the repo directly. -->
 
 ## Part D: Exploring the FASTQ files with Unix data tools
 
@@ -244,7 +243,7 @@ cp /fs/ess/PAS3493/people/mcquain7/garrigos/fastq/S63_R1.fastq.gz /fs/ess/PAS349
 The output of the command was:
 
 ```
-I did not get an output of the above command
+
 ```
 
 ### 17: Check Git status again
@@ -298,13 +297,9 @@ The output of the command was:
 
 ### 20: Stage and commit README again
 
-<!-- No command/output needed here -- we check the repo directly. -->
-
 ## Bonus
 
 ### 21: Why do the counts from questions 8 and 9 differ?
-
-<!-- Add any commands you ran and their output in code blocks, as above. -->
 
 ```bash
 grep "#" annot.gtf
