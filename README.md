@@ -1,22 +1,9 @@
-<!--
-GA2 README template.
-- Add your answers to each question's section below.
-- For each question, unless noted otherwise: put the command(s) you ran in
-  the corresponding ```bash code block, and the command's output in a plain ```
-  code block right below it -- these blocks are present in this template,
-  so you simply fill them in.
-  If a command doesn't print any output, you can leave the output block empty.
-- Delete instructional comments like this one as you go.
--->
 
 # GA2 answers - `Keely McQuain`
 
 ## Part A: Starting a Git repository
 
 ### 1: Copy the template file and add your name
-
-<!-- Put your command in the bash code block below. -->
-<!-- Add your name to the header line at the very top of this file. -->
 
 ```bash
 cp /fs/ess/PAS3493/share/GA2/GA2_template.md .
@@ -25,17 +12,12 @@ mv -v GA2_template.md README.md
 
 ### 2: Initialize a Git repository
 
-<!-- No command/output needed here -- we check the repo directly. -->
-
 ### 3: Stage and commit README
 
-<!-- No command/output needed here -- we check the repo directly. -->
 
 ## Part B: Exploring the GTF file with Unix data tools
 
 ### 4: Create `data`/`results` dirs and copy the GTF file
-
-<!-- Put your command(s) in the bash code block below. -->
 
 ```bash
 mkdir data 
@@ -45,10 +27,8 @@ cp /fs/ess/PAS3493/people/mcquain7/garrigos/ref/annot.gtf.gz /fs/ess/PAS3493/peo
 
 The output of the command was:
 
-<!-- Put the command output in the code block below. -->
-
 ```
-i did not get an output?
+
 ```
 
 ### 5: File size of `annot.gtf.gz`
@@ -69,8 +49,6 @@ total 5.1M
 ```bash
 gunzip data/annot.gtf.gz
 ```
-
-<!-- Put the command you used to check the size of annot.gtf below. -->
 
 ```bash
 ls -lh
@@ -260,56 +238,63 @@ Update: once I pressed file > save all it finally worked.
 ### 16: Copy the FASTQ file
 
 ```bash
-
+cp /fs/ess/PAS3493/people/mcquain7/garrigos/fastq/S63_R1.fastq.gz /fs/ess/PAS3493/people/mcquain7/GA2/data
 ```
 
 The output of the command was:
 
 ```
-
+I did not get an output of the above command
 ```
 
 ### 17: Check Git status again
 
 ```bash
-
+git status
 ```
 
 The output of the command was:
 
 ```
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
 
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 *Answer*: Does the FASTQ file show up? Why/why not?
+No it does not. This is because it is in a directory that is being ignored by git. 
 
 ### 18: Number of reads in the FASTQ file
 
 ```bash
-
+zcat S63_R1.fastq.gz | wc -l
 ```
 
 The output of the command was:
 
 ```
-
+2000000
 ```
 
-*Answer*: Number of reads: _____
+*Answer*: Number of reads: __5,000,000___
 
 ### 19: Reads with at least 10 consecutive `N`s
 
 ```bash
-
+zcat S63_R1.fastq.gz | grep -c "NNNNNNNNNN"
 ```
 
 The output of the command was:
 
 ```
-
+32612
 ```
 
-*Answer*: Number of reads with at least 10 consecutive `N`s: _____
+*Answer*: Number of reads with at least 10 consecutive `N`s: __32,612___
 
 ### 20: Stage and commit README again
 
@@ -321,8 +306,23 @@ The output of the command was:
 
 <!-- Add any commands you ran and their output in code blocks, as above. -->
 
-*Answer*:
+```bash
+grep "#" annot.gtf
+```
+
+The output of the command was:
+
+```
+#gtf-version 2.2
+#!genome-build TS_CPP_V2
+#!genome-build-accession NCBI_Assembly:GCF_016801865.2
+#!annotation-source NCBI RefSeq GCF_016801865.2-RS_2022_12
+###
+```
+
+*Answer*: In question 8 when I visually counted the header lines, I used the command head, which only displayed the first 10 lines. By using grep in question 9, it located every line with a "#", not just the header lines. 
 
 ### 22: Concepts/commands you don't (fully) understand
 
-*Answer*:
+*Answer*: I get confused when trying to use "../.." to navigate to files. I think it's easier for me to visually see the path typed out.  
+I am also still a little confused on the purpose of git and committing files. 
