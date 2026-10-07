@@ -313,3 +313,7 @@ The output of the command was:
 
 *Answer*: I get confused when trying to use "../.." to navigate to files. I think it's easier for me to visually see the path typed out.  
 I am also still a little confused on the purpose of git and committing files. 
+
+
+## Created GitHub repo on 10/7
+URL:  https://github.com/keelymcquain/week06 
